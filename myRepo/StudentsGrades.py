@@ -25,6 +25,9 @@ tyler = {
     "tests": [100.0, 100.0]
 }
 
+#list of students
+students = [lloyd, alice, tyler]
+
 # Getting the average of numbers
 def average(numbers):
     total = sum(numbers)
@@ -57,5 +60,16 @@ def get_letter_grade(score):
     else:
         return "F"
   
- #Finally getting the grade of students.       
-print get_letter_grade(get_average(alice))
+
+def get_class_average(students):
+    results=[]
+    for st in students:
+        student_avg = get_average(st)
+        results.append(student_avg)
+    class_avg = average(results)   
+    return class_avg
+
+#Finally getting the grade of students.       
+#print get_letter_grade(get_average(alice))
+
+print get_class_average(students)
