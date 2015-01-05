@@ -29,8 +29,9 @@ ship_col = random_col(board)
 #print ship_row
 #print ship_col
 
+Turns = 5 #Totally 5 trials
 
-for turn in range(4):
+for turn in range(Turns):
     guess_row = int(raw_input("Guess Row:"))
     guess_col = int(raw_input("Guess Col:"))
 
@@ -47,6 +48,6 @@ for turn in range(4):
             board[guess_row][guess_col] = "X"
         print  turn+1
         print_board(board)
-    if turn == 3:
+    if turn == Turns-1:
         print "Game Over"
         
